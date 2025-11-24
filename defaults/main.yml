@@ -58,7 +58,7 @@ watchdog_max_load_15: ""
 watchdog_min_memory: ""
 
 # Binary used to execute user-defined repair actions.
-watchdog_repair_binary: ""
+watchdog_repair_binary: "/bin/true"
 
 # Maximum duration over which user-defined repair actions are allowed
 # to run.
