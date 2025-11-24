@@ -1,0 +1,5 @@
+---
+- name: install the watchdog package
+  dnf:
+    name: watchdog
+    state: present
