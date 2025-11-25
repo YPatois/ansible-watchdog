@@ -15,6 +15,9 @@ realtime           = {{ "yes" if watchdog_realtime == True else watchdog_realtim
 {% if watchdog_priority %}
 priority           = {{watchdog_priority}}
 {% endif %}
+{% if watchdog_log_killed_pids %}
+log-killed-pids    = {{watchdog_log_killed_pids}}
+{% endif %}
 {% if watchdog_logtick %}
 logtick            = {{watchdog_logtick}}
 {% endif %}
@@ -59,6 +62,9 @@ test-binary        = {{watchdog_test_binary}}
 {% endif %}
 {% if watchdog_test_timeout %}
 test-timeout       = {{watchdog_test_timeout}}
+{% endif %}
+{% if watchdog_timeout %}
+watchdog-timeout   = {{watchdog_timeout}}
 {% endif %}
 {% if watchdog_temperature_device %}
 temperature-device = {{watchdog_temperature_device}}
