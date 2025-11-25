@@ -10,3 +10,9 @@
     src: watchdog.conf.j2
     dest: /etc/watchdog.conf
   notify: restart watchdog daemon
+
+- name: Enable watchdog daemon
+  service:
+    name: "{{ watchdog_service_name }}"
+    enabled: yes
+
