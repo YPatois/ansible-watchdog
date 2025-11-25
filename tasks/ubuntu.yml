@@ -1,16 +1,3 @@
 ---
-- include_tasks: redhat.yml
-  when: ansible_os_family == "RedHat"
-
-- include_tasks: ubuntu.yml
-  when: ansible_os_family == "Debian"
-
-
 - name: install the watchdog package
   apt: pkg=watchdog state=present
-
-- name: configure watchdog daemon
-  template:
-    src: watchdog.conf.j2
-    dest: /etc/watchdog.conf
-  notify: restart watchdog daemon
