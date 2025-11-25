@@ -7,13 +7,16 @@ watchdog_service_name: watchdog.service
 # [1] http://linux.die.net/man/5/watchdog.conf
 
 # Path to the watchdog device.
-watchdog_device: /dev/watchdog
+watchdog_device: ""
 
 # Email address to to which to send admin mail.
 watchdog_admin: ""
 
 # Interval between writes to the watchdog device, in seconds.
 watchdog_interval: ""
+
+# enables the logging of the PID values for all processes that are being killed
+watchdog_log_killed_pids: ""
 
 # Number of intervals skipped before logging messages (see
 # watchdog.conf manpage).
@@ -58,11 +61,14 @@ watchdog_max_load_15: ""
 watchdog_min_memory: ""
 
 # Binary used to execute user-defined repair actions.
-watchdog_repair_binary: "/bin/true"
+watchdog_repair_binary: ""
 
 # Maximum duration over which user-defined repair actions are allowed
 # to run.
 watchdog_repair_timeout: ""
+
+# Watchdog timeout
+watchdog_timeout: ""
 
 # Binary used to execute user-defined tests.
 watchdog_test_binary: ""
